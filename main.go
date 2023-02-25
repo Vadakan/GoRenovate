@@ -2,10 +2,20 @@ package main
 
 import (
     "fmt"
-    "github.com/google/uuid"
+    "github.com/go-redis/redis"
 )
 
 func main() {
-    id := uuid.New()
-    fmt.Println(id.String())
+    client := redis.NewClient(&redis.Options{
+        Addr: "localhost:6379",
+        Password: "",
+        DB: 0,
+    })
+
+    pong, err := client.Ping().Result()
+    if err != nil {
+        panic(err)
+    }
+
+    fmt.Println(pong)
 }
