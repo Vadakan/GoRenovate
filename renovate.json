@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "packageNames": [
+        "github.com/google/uuid"
+      ],
+      "updateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ]
+    }
+  ]
+}
