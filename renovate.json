@@ -1,19 +1,11 @@
 {
-  "extends": [
-    "config:base"
-  ],
   "platform": "github",
-  "token": "RenovateAPP",
-  "packageRules": [
-    {
-      "packageNames": [
-        "github.com/google/uuid"
-      ],
-      "updateTypes": [
-        "major",
-        "minor",
-        "patch"
-      ]
-    }
+  "token": "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",
+  "baseBranches": ["main"],
+  "schedule": "after 9pm every weekday",
+  "labels": ["renovate"],
+  "extends": ["config:base"],
+  "ignoreDeps": [
+    "^github.com/myorg/ignored-dependency$"
   ]
 }
