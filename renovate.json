@@ -2,6 +2,8 @@
   "extends": [
     "config:base"
   ],
+  "platform": "github",
+  "token": "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",
   "packageRules": [
     {
       "packageNames": [
